@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-
+//this is the cutie pie home controller.  important stuff happens here
 namespace Assignment10.Controllers
 {
     public class HomeController : Controller

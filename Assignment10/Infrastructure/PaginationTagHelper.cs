@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Assignment10.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
-
+//tag helprs
 namespace Assignment10.Infrastructure
 {
     [HtmlTargetElement("div", Attributes ="page-info")]
