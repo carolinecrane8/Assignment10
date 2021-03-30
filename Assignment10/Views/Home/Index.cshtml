@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IndexViewModel
+
+
+@if (Model.Team != null)
+{
+    <h2>@Model.Team</h2>
+    <br />
+}
+else
+{
+    <h2>Bowling League Roster</h2>
+    <br />
+}
+
+@foreach (var x in Model.Bowlers)
+{
+    @*<p>@x.BowlerFirstName @x.BowlerMiddleInit, @x.BowlerLastName, @x.BowlerAddress, @x.BowlerCity, @x.BowlerState, @x.BowlerZip, @x.BowlerPhoneNumber  </p>*@
+
+
+
+    <div class="container, text-left">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#@x.BowlerId">@x.BowlerFirstName @x.BowlerMiddleInit @x.BowlerLastName</a>
+                    </h4>
+                </div>
+                <div id="@x.BowlerId" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>Address: @x.BowlerAddress</p>
+                        <p>City: @x.BowlerCity</p>
+                        <p>State: @x.BowlerState</p>
+                        <p>Zip: @x.BowlerZip</p>
+                        <p>Phone Number: @x.BowlerPhoneNumber</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    Console.WriteLine(Model.PageNumberingInfo.NumPages);
+
+
+}
+
+ 
+<div class="btn-outline-light"page-info="@Model.PageNumberingInfo" page-url-team="@Model.Team" >
+
+</div>
